@@ -3,7 +3,7 @@ import { LinksunBackend } from "../../services/api";
 export async function listarUsuario() {
   const nomeDaFuncao = "listarUsuario";
   const tipos = await LinksunBackend.get(
-    `?action=${nomeDaFuncao}&class=Agenda`
+    `?action=${nomeDaFuncao}&class=Usuario`
   ).then((response) => response.body);
   return tipos;
 }
@@ -35,7 +35,7 @@ export async function editarAgendamento(data: any) {
 }
 
 export async function apagarAgendamento(data: any) {
-  const nomeDaFuncao = apagarAgendamento.name;
+  const nomeDaFuncao = "apagarAgendamento";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=Agenda`,
     data
@@ -44,7 +44,7 @@ export async function apagarAgendamento(data: any) {
 }
 
 export async function listarAgendamentos(idUsuario: any) {
-  const nomeDaFuncao = listarAgendamentos.name;
+  const nomeDaFuncao = "listarAgendamentos";
   const response = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=Agenda&idUsuario=${idUsuario}`
   ).then((response) => response.body);
@@ -52,7 +52,7 @@ export async function listarAgendamentos(idUsuario: any) {
 }
 
 export async function listarAgendamentosUsuarios() {
-  const nomeDaFuncao = listarAgendamentosUsuarios.name;
+  const nomeDaFuncao = "listarAgendamentosUsuarios";
   const response = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=Agenda`
   ).then((response) => response.body);
