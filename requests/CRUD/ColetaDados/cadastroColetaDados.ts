@@ -16,7 +16,7 @@ export interface IDistribuidor {
 }
 
 export async function listarKitDistribuidores(data: any) {
-  const nomeDaFuncao = listarKitDistribuidores.name;
+  const nomeDaFuncao = "listarKitDistribuidores";
 
   const response = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=Distribuidor&request_body=${data}`
@@ -25,7 +25,7 @@ export async function listarKitDistribuidores(data: any) {
 }
 
 export async function cadastrarColetaDados(data: any) {
-  const nomeDaFuncao = cadastrarColetaDados.name;
+  const nomeDaFuncao = "cadastrarColetaDados";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=ColetaDados`,
     data
@@ -33,28 +33,28 @@ export async function cadastrarColetaDados(data: any) {
   return response;
 }
 export async function listarComponentes() {
-  const nomeDaFuncao = listarComponentes.name;
+  const nomeDaFuncao = "listarComponentes";
   const orientacoes = await LinksunBackend.get(
     `/index.php?action=${nomeDaFuncao}&class=ComponentesKit`
   );
   return orientacoes;
 }
 export async function listarKitsDistribuidores(dados: any) {
-  const nomeDaFuncao = listarKitsDistribuidores.name;
+  const nomeDaFuncao = "listarKitsDistribuidores";
   const orientacoes = await LinksunBackend.get(
     `/index.php?action=${nomeDaFuncao}&class=ComponentesKit&qtdModulos=${dados}`
   ).then((res) => res.body);
   return orientacoes;
 }
 export async function listarComponentesKit(idKit: number) {
-  const nomeDaFuncao = listarComponentesKit.name;
+  const nomeDaFuncao = "listarComponentesKit";
   const orientacoes = await LinksunBackend.get(
     `/index.php?action=${nomeDaFuncao}&class=ComponentesKit&idKit=${idKit}`
   ).then((res) => res.body);
   return orientacoes;
 }
 export async function listarComponentesKitByKitId(idKit: number) {
-  const nomeDaFuncao = listarComponentesKitByKitId.name;
+  const nomeDaFuncao = "listarComponentesKitByKitId";
   const orientacoes = await LinksunBackend.get(
     `/index.php?action=${nomeDaFuncao}&class=ComponentesKit&idKit=${idKit}`
   ).then((res) => res.body);
@@ -66,7 +66,7 @@ export async function camposPersonalizados(dados: any) {
 }
 
 export async function verificaTelefone(data: any) {
-  const nomeDaFuncao = verificaTelefone.name;
+  const nomeDaFuncao = "verificaTelefone";
   const response = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=ColetaDados&telefone=${data}`
   );

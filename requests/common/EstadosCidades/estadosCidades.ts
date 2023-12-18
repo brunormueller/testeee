@@ -7,7 +7,7 @@ export interface IEstado {
 }
 
 export async function listarEstados() {
-  const nomeDaFuncao = listarEstados.name;
+  const nomeDaFuncao = "listarEstados";
   const response = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=Estado`
   ).then((response) => response.body);
@@ -21,14 +21,14 @@ export interface ICidade {
 }
 
 export async function listarCidades() {
-  const nomeDaFuncao = listarCidades.name;
+  const nomeDaFuncao = "listarCidades";
   const response = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=Cidade`
   ).then((response) => response.body);
   return response;
 }
 export async function listarCidadesPorNome(nome: any) {
-  const nomeDaFuncao = listarCidadesPorNome.name;
+  const nomeDaFuncao = "listarCidadesPorNome";
   const response = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=Cidade&nome=${nome}`
   ).then((response) => response.body);
@@ -36,7 +36,7 @@ export async function listarCidadesPorNome(nome: any) {
 }
 
 export async function listarCidadesComEstado() {
-  const nomeDaFuncao = listarCidadesComEstado.name;
+  const nomeDaFuncao = "listarCidadesComEstado";
   const response = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=Cidade`
   ).then((response) => response.body);

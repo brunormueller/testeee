@@ -10,7 +10,7 @@ export async function login(data: any) {
 }
 
 export async function enviarEmail(data: any) {
-  const nomeDaFuncao = enviarEmail.name;
+  const nomeDaFuncao = "enviarEmail";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=RecuperarSenha`,
     data
@@ -18,7 +18,7 @@ export async function enviarEmail(data: any) {
   return response;
 }
 export async function verificaCodigoEmail(data: any) {
-  const nomeDaFuncao = verificaCodigoEmail.name;
+  const nomeDaFuncao = "verificaCodigoEmail";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=RecuperarSenha`,
     data
@@ -26,7 +26,7 @@ export async function verificaCodigoEmail(data: any) {
   return response;
 }
 export async function criarNovaSenha(data: any) {
-  const nomeDaFuncao = criarNovaSenha.name;
+  const nomeDaFuncao = "criarNovaSenha";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=RecuperarSenha`,
     data

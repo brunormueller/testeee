@@ -1,7 +1,7 @@
 import { LinksunBackend } from "@/services/api";
 
 export async function enviarArquivo(data: FormData) {
-  const nomeDaFuncao = enviarArquivo.name;
+  const nomeDaFuncao = "enviarArquivo";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=Kanban`,
     data,

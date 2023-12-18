@@ -1,7 +1,7 @@
 import { LinksunBackend } from "@/services/api";
 
 export async function cadastrarProposta(data: any) {
-  const nomeDaFuncao = cadastrarProposta.name;
+  const nomeDaFuncao = "cadastrarProposta";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=Propostas`,
     data,
@@ -11,7 +11,7 @@ export async function cadastrarProposta(data: any) {
 }
 
 export async function RSIB(data: any) {
-  const nomeDaFuncao = RSIB.name;
+  const nomeDaFuncao = "RSIB";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=RSI`,
     data,

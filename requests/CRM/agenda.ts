@@ -1,23 +1,23 @@
 import { LinksunBackend } from "../../services/api";
 
 export async function listarUsuario() {
-  const nomeDaFuncao = listarUsuario.name;
+  const nomeDaFuncao = "listarUsuario";
   const tipos = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=Agenda`
-  ).then((response)=>response.body);
+  ).then((response) => response.body);
   return tipos;
 }
 
 export async function listarCliente() {
-  const nomeDaFuncao = listarCliente.name;
+  const nomeDaFuncao = "listarCliente";
   const tipos = await LinksunBackend.get(
     `?action=${nomeDaFuncao}&class=Agenda`
-  ).then((response)=>response.body);
+  ).then((response) => response.body);
   return tipos;
 }
 
-export async function cadastrarAgendamento(data:any) {
-  const nomeDaFuncao = cadastrarAgendamento.name;
+export async function cadastrarAgendamento(data: any) {
+  const nomeDaFuncao = "cadastrarAgendamento";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=Agenda`,
     data
@@ -25,8 +25,8 @@ export async function cadastrarAgendamento(data:any) {
   return response;
 }
 
-export async function editarAgendamento(data:any) {
-  const nomeDaFuncao = editarAgendamento.name;
+export async function editarAgendamento(data: any) {
+  const nomeDaFuncao = "editarAgendamento";
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=Agenda`,
     data
@@ -34,8 +34,7 @@ export async function editarAgendamento(data:any) {
   return response;
 }
 
-
-export async function apagarAgendamento(data:any) {
+export async function apagarAgendamento(data: any) {
   const nomeDaFuncao = apagarAgendamento.name;
   const response = await LinksunBackend.post(
     `?action=${nomeDaFuncao}&class=Agenda`,
@@ -59,7 +58,6 @@ export async function listarAgendamentosUsuarios() {
   ).then((response) => response.body);
   return response;
 }
-
 
 // export async function GravaLogAgenda() {
 //   const nomeDaFuncao = GravaLogAgenda.name;

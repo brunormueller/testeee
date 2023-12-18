@@ -1,20 +1,20 @@
 import { LinksunBackend } from "../../../services/api";
 
 export async function cadastrarKit(data: any) {
-    const nomeDaFuncao = cadastrarKit.name;
-    const response = await LinksunBackend.post(
-        `?action=${nomeDaFuncao}&class=KitManual`,
-        data
-    );
-    return response;
+  const nomeDaFuncao = "cadastrarKit";
+  const response = await LinksunBackend.post(
+    `?action=${nomeDaFuncao}&class=KitManual`,
+    data
+  );
+  return response;
 }
 export async function cadastrarItens(data: any) {
-    const nomeDaFuncao = cadastrarItens.name;
-    const response = await LinksunBackend.post(
-        `?action=${nomeDaFuncao}&class=KitManual`,
-        data
-    ).then((response) => response.body);
-    return response;
+  const nomeDaFuncao = "cadastrarItens";
+  const response = await LinksunBackend.post(
+    `?action=${nomeDaFuncao}&class=KitManual`,
+    data
+  ).then((response) => response.body);
+  return response;
 }
 
 // export async function listarPotenciaModulos() {
@@ -27,16 +27,16 @@ export async function cadastrarItens(data: any) {
 //   return data;
 // // }
 export async function listarPotenciaModulos() {
-    const nomeDaFuncao = listarPotenciaModulos.name;
-    const tipos = await LinksunBackend.get(
-        `?action=${nomeDaFuncao}&class=RequisicoesGerais`
-    );
-    return tipos;
+  const nomeDaFuncao = "listarPotenciaModulos";
+  const tipos = await LinksunBackend.get(
+    `?action=${nomeDaFuncao}&class=RequisicoesGerais`
+  );
+  return tipos;
 }
 export async function listarInversores() {
-    const nomeDaFuncao = listarInversores.name;
-    const tipos = await LinksunBackend.get(
-        `?action=${nomeDaFuncao}&class=RequisicoesGerais`
-    );
-    return tipos;
+  const nomeDaFuncao = "listarInversores";
+  const tipos = await LinksunBackend.get(
+    `?action=${nomeDaFuncao}&class=RequisicoesGerais`
+  );
+  return tipos;
 }
